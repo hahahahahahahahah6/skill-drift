@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "skill-drift"
+version = "0.1.0"
+description = "Offline heuristic auditing of skill package claims"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [{name = "skill-drift contributors"}]
+dependencies = []
+
+[project.scripts]
+skill-drift = "skill_drift.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
