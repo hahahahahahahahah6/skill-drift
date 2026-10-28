@@ -11,7 +11,7 @@ Requires Python 3.9+. Install with `pip install .`, or install a built wheel.
 skill-drift audit [path] [--json] [--fail-on high|medium] [--ignore G]
 skill-drift --version
 skill-drift --help
-python -m skill_drift audit .
+python3 -m skill_drift audit .
 ```
 
 Path defaults to the current directory. Repeat `--ignore` for multiple glob
@@ -130,9 +130,9 @@ during a run can affect results; this is a snapshot-style audit, not a monitor.
 ## Development
 
 ```sh
-PYTHONPATH=src python -m unittest discover -s tests -v
-python -m build
-python -m venv /tmp/skill-drift-smoke
+PYTHONPATH=src python3 -m unittest discover -s tests -v
+python3 -m build
+python3 -m venv /tmp/skill-drift-smoke
 /tmp/skill-drift-smoke/bin/pip install dist/skill_drift-0.1.0-py3-none-any.whl
 /tmp/skill-drift-smoke/bin/skill-drift audit examples/sample-skills/good-skill
 ```
